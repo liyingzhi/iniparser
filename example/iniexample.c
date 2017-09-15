@@ -11,7 +11,7 @@ int  parse_ini_file(char * ini_name);
 int main(int argc, char * argv[])
 {
     int     status ;
-
+    
     if (argc<2) {
         create_example_ini_file();
         status = parse_ini_file("example.ini");
@@ -85,7 +85,7 @@ int parse_ini_file(char * ini_name)
 
     /* Get wine attributes */
     printf("Wine:\n");
-    s = iniparser_getstring(ini, "wine:grape", NULL);
+    s = iniparser_getstring(ini, "ec:ec_mode", NULL);
     printf("Grape:     [%s]\n", s ? s : "UNDEF");
 
     i = iniparser_getint(ini, "wine:year", -1);
